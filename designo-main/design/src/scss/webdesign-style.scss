@@ -1,0 +1,10 @@
+@import "../../../src/scss/global/abstracts/fonts";
+@import "../../../src/scss/global/abstracts/variables";
+@import "../../../src/scss/global/abstracts/mixin";
+
+/* INDEX */
+@import "../../../src/scss/global/header";
+@import "block";
+@import "pannel";
+@import "gallery";
+@import "../../../src/scss/global/footer";

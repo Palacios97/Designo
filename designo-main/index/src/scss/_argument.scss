@@ -1,0 +1,104 @@
+/* SECTION ARGUMENTS */
+.argument {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 16rem;
+    
+    @include first {
+        margin: 0 5rem 16rem;
+    }
+
+    @include tablet {
+        flex-direction: column;
+        margin: 0 3.9rem 12rem;
+   }
+
+   @include sixth {
+       margin: 0 2.8rem 8rem;
+   }
+
+    &__one, &__two, &__three {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        @include fifth {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+   &__image {
+       position: relative;
+       z-index: 1;
+       width: 100%;
+
+       @include fifth {
+           margin-bottom: 4.8rem;
+       }
+   }
+
+
+   &__title {
+       position: relative;
+       z-index: 1;
+       font-weight: 500;
+       font-size: 2rem;
+       text-align: center;
+       color: $dark-grey;
+       margin-bottom: 3.2rem;
+       text-transform: uppercase;
+
+        @include tablet {
+            text-align: left;
+        }
+
+        @include fifth {
+            text-align: center;
+        }
+   }
+
+   &__text {
+       position: relative;
+       z-index: 1;
+       max-width: 35rem;
+       text-align: center;
+       font-weight: 400;
+       font-size: 1.6rem;
+       line-height: 2.6rem;
+       color: $dark-grey;
+
+       @include tablet {
+           text-align: left;
+       }
+
+       @include fifth {
+           text-align: center;
+       }
+   }
+
+   &__bg-shape {
+       position: absolute;
+       transform: rotate(-180deg);
+       width: 100.6rem;
+       height: 59.4rem;
+       left: 345px;
+       top: 14rem;
+       opacity: 0.5;
+       mix-blend-mode: normal;
+   }
+}
+
+.flex-cln {
+    display: flex;
+    flex-direction: column;
+}

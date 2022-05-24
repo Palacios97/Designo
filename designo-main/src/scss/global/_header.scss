@@ -1,0 +1,214 @@
+/* RESET */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* STYLE */
+
+html {
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-size: 62.5%;
+    font-family: $jost;
+
+    @include first {
+     font-size: 55%;
+    }
+
+    @include second {
+      font-size: 50%;
+    }
+
+    @include tablet {
+      font-size: 62.5%;
+    }
+
+    @include fourth {
+      font-size: 59.5%;
+    }
+    
+    @include sixth {
+      font-size: 55%;
+    }
+
+    @include seventh {
+      font-size: 45%;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+/**/
+/* NAVIGATION /
+/**/
+
+.main-nav {
+    max-width: 111.1rem;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 6.5rem;
+    margin-bottom: 7rem;
+    align-items: center;
+    
+    @include first {
+      margin: 6rem 5rem 7rem;
+     }
+
+     @include fifth {
+       margin-top: 3.5rem;
+       margin-bottom: 3.5rem;
+       margin-left: 2.4rem;
+       position: relative;
+
+       .inactive {
+        transform: translateX(-100%);
+      }
+
+      
+     }
+
+     
+  
+    .logo-header {
+      width: 19.5rem;
+    }
+    
+    .main-nav-list {
+      display: flex;
+      gap: 4.2rem;
+  
+      align-items: center;
+      list-style: none;
+      position: relative;
+
+      transition: all 0.3s;
+      
+      
+
+      @include fifth {
+        position: absolute;
+        top: 59px;
+        left: -23px;
+
+        
+        
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 4.8rem;
+        padding-bottom: 4.8rem;
+        padding-left: 2.6rem;
+
+        background-color: #1D1C1E;
+        width: 100vw;
+        color: #fff;
+        z-index: 55;
+
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 290px;
+          left: 0;
+          width: 100%;
+          height: 100vh;
+          background-color: #33313674;
+          z-index: -4;
+        }
+      }
+  
+      .main-nav-link:link,
+      .main-nav-link:active,
+      .main-nav-link:visited {
+        font-size: 1.4rem;
+        color: #333136;
+        text-decoration: none;
+        text-transform: uppercase;
+  
+        /* for the after */
+        position: relative;
+
+        @include fifth {
+          color: #fff;
+          font-size: 2.9rem;
+        }
+  
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          transform: scaleX(0);
+          transition: transform 0.4s ease;
+          transform-origin: bottom right;
+          background-color: #333136;
+        }
+  
+        &:hover::after {
+          transform-origin: bottom left;
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+
+
+  /* HAMBURGER */
+
+
+  .hamburger {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+
+    display: none;
+
+    @include fifth {
+      display: flex;
+    }
+  }
+  
+  .hamburger span {
+    position: absolute;
+    width: 35px;
+    height: 4px;
+    background: #000;
+    transition: 0.5s;
+  }
+  
+  .hamburger span:nth-child(1) {
+    transform: translateY(-15px);
+    width: 35px;
+  }
+  
+  .hamburger.active span:nth-child(1) {
+    width: 35px;
+    transform: translateY(0px) rotate(45deg);
+  }
+  
+  .hamburger span:nth-child(2) {
+    transform: translateY(15px);
+    width: 35px;
+  }
+  
+  .hamburger.active span:nth-child(2) {
+    transform: translateY(0px) rotate(315deg);
+    width: 35px;
+  }
+  
+  .hamburger.active span:nth-child(3) {
+    transform: translateX(60px);
+  }

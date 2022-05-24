@@ -1,0 +1,186 @@
+/* SECTION MAP */
+
+.section-map {
+    margin-bottom: 16rem;
+
+    @include tablet {
+      margin-bottom: 12rem;
+    }
+
+    .article-map {
+      max-width: 108rem;
+      margin: 0 auto 3.2rem;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+
+      @include first {
+        margin: 0 5rem 3.2rem;
+      }
+
+      @include nd-loca {
+        flex-direction: column-reverse;
+        margin-bottom: 12rem;
+      }
+
+      @include fourth-loca {
+        margin: 0 2.4rem 8rem 2.4rem;
+      }
+
+      @include fifth-loca {
+        margin: 0 0 4rem 0;
+        gap: 0;
+      }
+
+      .map {
+        border-radius: 15px;
+
+        @include nd-loca {
+          display: none;
+        }
+
+      }
+  
+      .address-map {
+        width: 100%;
+        background: url("../../locations/src/img/location_background.png");
+        border-radius: 15px;
+        padding: 8.8rem 0 0 9.5rem;
+
+        @include st-loca {
+          padding: 8.8rem 0 0 5.5rem
+        }
+
+        @include nd-loca {
+          height: 34.2rem;
+          background: url("/locations/src/img/bg-mid.png");
+          background-size: cover;
+        }
+
+        @include tablet {
+          height: 32.6rem;
+          background: url("/locations/src/img/bg-mid.png");
+        }
+
+        @include rd-loca {
+          padding: 8.6rem 0 0 4rem
+        }
+
+        @include fourth-loca {
+          background: url("/locations/src/img/bg-mobile.png");
+          background-size: initial;
+          height: 39.4rem;
+          padding: 8rem 0 0 0;
+
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        @include fifth-loca {
+          padding: 4rem 0 0 0;
+          border-radius: 0px;
+        }
+  
+        .address-country {
+          @include loca-title;
+          margin-bottom: 2.6rem;
+
+          @include fourth-loca {
+            text-align: center;
+          }
+        }
+  
+        .address-contact {
+          display: flex;
+          gap: 9.5rem;
+
+          @include rd-loca {
+            gap: 6.5rem;
+          }
+
+          @include fourth-loca {
+            flex-direction: column;
+            gap: 2.4rem;
+          }
+
+          @include fourth-loca {
+            text-align: center;
+          }
+  
+          .address {
+            h2 {
+              font-size: 1.6rem;
+              font-weight: 700;
+              line-height: 26px;
+            }
+  
+            p {
+              @include loca-text;
+            }
+          }
+  
+          .contact {
+            h2 {
+              font-size: 1.6rem;
+              font-weight: 700;
+              line-height: 26px;
+            }
+  
+            p {
+              @include loca-text;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  /* SECOND ELEMENT REVERSE */
+  
+  .article-map:nth-child(2) {
+    flex-direction: row-reverse;
+
+    @include nd-loca {
+      flex-direction: column-reverse;
+    }
+
+    @include fifth-loca {
+      gap: 0;
+    }
+  }
+
+
+  /* */
+
+  .map-mid {
+    display: none;
+
+    @include nd-loca {
+      display: block;
+/*       height: 32.6rem; */
+      width: 100%;
+    }
+
+    @include fourth-loca {
+      display: none;
+    }
+  }
+
+
+  /*  */
+
+
+  .map-mob {
+    display: none;
+    border-radius: 15px;
+
+    @include fourth-loca {
+      display: block;
+    }
+
+    @include fifth-loca {
+      border-radius: 0px;
+    }
+  }

@@ -1,0 +1,283 @@
+/* FOOTER */
+.footer {
+    .block { /* Block juste au dessus du header */
+        position: relative;
+        z-index: 1;
+        background-image: url("../../src/img/global/footer.png");
+        background-position: center;
+        background-size: cover;
+        max-width: 111.1rem;
+        height: 29.2rem;
+        margin: 0 auto;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        @include first {
+            margin: 0 5rem 0;
+            max-width: none;
+           }
+
+        @include tablet {
+            height: 35rem;
+        }
+
+        @include sixth {
+            margin: 0 2.8rem 0;
+        }
+
+        &__area {
+            width: 111.1rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 11.8rem 0 9.5rem;
+
+            @include tablet {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: initial;
+                margin: 0 auto;
+            }
+        }
+
+        &__textarea {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+
+            @include tablet {
+                text-align: center;
+                margin-bottom: 3.2rem;
+            }
+        }
+
+        &__title {
+            max-width: 26.8rem;
+            font-weight: 500;
+            font-size: 4rem;
+            line-height: 4rem;
+            color: $white;
+
+            @include tablet {
+                max-width: 33.5rem;
+                margin: auto;
+            }
+        }
+
+        &__text {
+            width: 45.9rem;
+            max-height: 5.2rem;
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+            color: $white;
+
+            @include fifth {
+                width: 88%;
+                margin: 0 auto;
+            }
+
+            @include sixth {
+                margin-bottom: 2.4rem
+            }
+        }
+
+        &__button {
+            @include button-style-white;
+        }
+
+    }
+
+    &__footer { /* Footer global */
+        position: absolute;
+        background-color: $black;
+        width: 100%;
+        height: 39.3rem;
+        margin-top: -10.0rem;
+
+        @include fourth {
+            height: initial;
+        }
+    }
+
+    &__links { /* Logo et navbar (Premiere section du footer) */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 101.1rem;
+        margin: 4.0rem 16.5rem;
+        padding-top: 14.4rem;
+
+        @include tablet {
+            margin: 4rem 4rem;
+        }
+
+        @include fourth {
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+            
+            
+        
+    }
+
+    &__logo {
+        width: 15.7rem;
+
+        @include fourth {
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    &__line {
+        border-top: 1px solid $white;
+        opacity: 0.1;
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 3.1rem;
+
+        @include fourth {
+            display: none;
+        }
+    }
+
+    .nav {
+        
+        &__list {
+            display: flex;
+            flex-direction: row;
+            gap: 4.2rem;
+            list-style: none;
+
+            @include fourth {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 3.2rem;
+            }
+        }
+
+        &__links {
+            color: $white;
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration-line: none;
+
+            &:hover {
+                text-decoration-line: underline;
+                text-decoration-color: rgba(255, 255, 255, 0.2);
+            }
+        }
+    }
+
+    .info { /* Adresse, contact, ... (2 ème section du footer) */
+        display: flex;
+        flex-direction: row;
+        gap: 12rem;
+        max-width: 101.1rem;
+        margin: 0 16.5rem;
+
+        @include second {
+            margin: 0 9.5rem;
+        }
+
+        @include tablet {
+            margin: 0 3.9rem;
+            gap: 5rem
+        }
+
+        @include fourth {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        &__adress {
+            color: $white;
+            opacity: 0.5;
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+            max-width: 35rem;
+
+            .bold {
+                font-weight: 700;
+            }
+        }
+
+        &__contact {
+            color: $white;
+            opacity: 0.5;
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+            font-weight: 700;
+            max-width: 35rem;
+            
+        }
+    }
+
+    .contact {
+
+        &__link {
+           text-decoration: none;
+           color: $white
+        }
+    }
+
+    .social { /* Liens des réseaux sociaux (3ème section du footer) */
+        
+        &__list {
+            display: flex;
+            flex-direction: row;
+            gap: 1.6rem;
+            justify-content: flex-end;
+            margin: 0px 11.6rem 7.2rem 0px;
+            position: relative;
+            bottom: 4.2rem;
+            list-style: none;
+
+            @include second {
+                margin: 0 8rem 7.2rem 2rem;
+            }
+
+            @include tablet {
+                margin: 0 3.9rem 8rem 2rem;
+            }
+
+            @include fourth {
+                justify-content: center;
+                bottom: -5rem;
+                margin: 0 auto 6.4rem;
+                padding-bottom: 5rem;
+            }
+        }
+        
+
+        &__links {
+            &:hover {
+                filter: brightness(0) saturate(100%) invert(69%) sepia(67%) saturate(338%) hue-rotate(318deg) brightness(100%) contrast(102%);                
+            }
+        }
+
+    }
+}
+
+.hidden {
+    border-top: 1px solid $white;
+    opacity: 0.1;
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 3.1rem;
+    display: none;
+
+    @include fourth {
+        display: block;
+    }
+}
